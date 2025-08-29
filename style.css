@@ -1,0 +1,59 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f8f2;
+  margin: 0; padding: 0;
+}
+header {
+  background: #2e7d32;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+nav {
+  background: #388e3c;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+.container { padding: 20px; }
+section {
+  background: white;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+h2 { color: #2e7d32; }
+button {
+  background: #388e3c;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover { background: #2e7d32; }
+.result {
+  margin-top: 10px;
+  padding: 10px;
+  background: #e8f5e9;
+  border: 1px solid #c8e6c9;
+  border-radius: 5px;
+}
+
+#sms-simulation input {
+  width: 70%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+#ivr-simulation select {
+  padding: 8px;
+  margin-bottom: 10px;
+}
+

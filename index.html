@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Crop Advisory</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet"></script>
+<script src="script.js"></script>
+
+
+</head>
+<body>
+  <header>
+    <h1>🌱 Smart Crop Advisory Platform</h1>
+    <p>Helping Farmers with Data-driven Insights</p>
+  </header>
+
+  <nav>
+    <a href="#crop-recommend">Crop Recommendation</a>
+    <a href="#soil-analysis">Soil Analysis</a>
+    <a href="#pest-detection">Pest Detection</a>
+    <a href="#market-price">Market Prices</a>
+    <a href="#govt-schemes">Govt Schemes</a>
+    <a href="#finance">Agri Finance</a>
+  </nav>
+
+  <div class="container">
+    <section id="crop-recommend">
+      <h2>🌾 Weather-based Crop Recommendation</h2>
+      <input type="number" id="temperature" placeholder="Enter Temp °C">
+      <input type="file" id="weatherUpload" accept="image/*">
+      <button onclick="recommendCrop()">Recommend</button>
+      <div id="cropResult" class="result"></div>
+    </section>
+
+
+    <section id="soil-analysis">
+      <h2>🧪 Soil Health Analysis</h2>
+      <input type="file" id="soilUpload">
+      <button onclick="analyzeSoil()">Analyze Soil</button>
+      <div id="soilResult" class="result"></div>
+    </section>
+
+    <section id="pest-detection">
+      <h2>🐛 Pest & Disease Detection</h2>
+      <input type="file" id="pestUpload">
+      <button onclick="detectPest()">Detect Pest</button>
+      <div id="pestResult" class="result"></div>
+    </section>
+
+    <section id="market-price">
+      <h2>💹 Market Price Prediction</h2>
+      <select id="cropSelect">
+        <option value="wheat">Wheat</option>
+        <option value="rice">Rice</option>
+        <option value="cotton">Cotton</option>
+      </select>
+      <button onclick="predictPrice()">Predict Price</button>
+      <div id="priceResult" class="result"></div>
+    </section>
+
+    <section id="govt-schemes">
+      <h2>🏛 Govt Schemes & Subsidies</h2>
+      <button onclick="showSchemes()">Show Schemes</button>
+      <div id="schemeResult" class="result"></div>
+    </section>
+
+    <section id="finance">
+      <h2>💰 Agri Finance & Insurance</h2>
+      <button onclick="showFinance()">View Options</button>
+      <div id="financeResult" class="result"></div>
+    </section>
+
+          <section id="sms-simulation">
+        <h2>📩 SMS Support (Offline Mode)</h2>
+        <input type="text" id="smsInput" placeholder="Type: recommend crop temp=25">
+        <button onclick="processSMS()">Send SMS</button>
+        <div id="smsResult" class="result"></div>
+      </section>
+
+      <section id="ivr-simulation">
+        <h2>☎ IVR Support (Offline Mode)</h2>
+        <select id="ivrSelect">
+          <option value="">-- Select Option --</option>
+          <option value="1">1. Crop Recommendation</option>
+          <option value="2">2. Market Price</option>
+          <option value="3">3. Govt Schemes</option>
+        </select>
+        <button onclick="processIVR()">Call</button>
+        <div id="ivrResult" class="result"></div>
+      </section>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
